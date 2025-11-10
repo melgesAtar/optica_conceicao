@@ -1,0 +1,134 @@
+.services {
+    display: block;
+    background: #FFFFFF;
+}
+
+.services-container {
+    max-width: 1550px;
+    margin: 0 auto;
+    padding: 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.services-title {
+    font-size: 5rem;
+    font-weight: 500;
+    color: #404040;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.services-highlight {
+    color: #00599C;
+    font-weight: 700;
+}
+
+.services-subtitle {
+    font-size: 2.3rem;
+    font-weight: 500;
+    color: #404040;
+    line-height: 1.5;
+    text-align: center;
+    max-width: 105rem;
+    margin-bottom: 9.3rem;
+}
+
+.services-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+    margin-bottom: 6rem;
+}
+
+.service-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #F5F5F5;
+    border-radius: 2rem;
+    padding: 5rem 3rem 3rem;
+    position: relative;
+    min-height: 26rem;
+    min-width: 26rem;
+}
+
+.service-card::after {
+    content: "";
+    display: block;
+    height: 0.8rem;
+    width: 60%;
+    background: linear-gradient(90deg, #00B1FB 0%, #002251 100%);
+    position: absolute;
+    left: 20%;
+    bottom: 0;
+}
+
+.service-icon {
+    --icon-size: 8.4rem;
+    width: var(--icon-size);
+    height: var(--icon-size);
+    border-radius: 50%;
+    background: linear-gradient(180deg, #00B1FB 0%, #002251 100%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -9rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 0.6rem 1.6rem rgba(0, 37, 81, 0.18);
+}
+
+.service-icon img {
+    width: 58%;
+    height: 58%;
+    object-fit: contain;
+    display: block;
+    filter: brightness(0) invert(1); /* garante ícone branco se necessário */
+}
+
+.service-text {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #404040;
+    line-height: 1.45;
+}
+
+.services-cta {
+    margin-top: 1rem;
+}
+
+/* Responsividade */
+@media (max-width: 1510px) {
+    .services-container {
+        padding: 6rem;
+    }
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+        
+        gap: 5rem;
+    }
+
+}
+
+@media (max-width: 850px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 560px) {
+    .services-container {
+        padding: 5rem 3rem;
+    }
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    .service-icon {
+        margin-top: -4rem;
+    }
+}
+

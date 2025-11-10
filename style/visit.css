@@ -1,0 +1,139 @@
+.visit {
+    background-image: url('../assets/visit/collage-smiling-portraits-mixed-age-group-men-women-glasses.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 78rem;
+}
+
+.visit-container {
+    height: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    padding: 9rem;
+}
+
+.visit-card {
+    width: 100%;
+    max-width: 115rem;
+    min-height: 40rem;
+    display: grid;
+    grid-template-columns: 26rem 1fr;
+    align-items: center;
+    gap: 3rem;
+    padding: 2rem 3rem;
+    border-radius: 2.8rem;
+	background: linear-gradient(90deg, rgba(0,0,0,0.60) 0%, rgba(0,0,0,0.35) 50%, rgba(0,0,0,0.60) 100%);
+    box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.25);
+	-webkit-backdrop-filter: blur(2rem) saturate(120%);
+	backdrop-filter: blur(2rem) saturate(120%);
+	border: 0.1rem solid rgba(255, 255, 255, 1);
+	opacity: 1;
+}
+
+.visit-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.visit-icon-img {
+    width: 22rem;
+    height: auto;
+    display: block;
+    filter: drop-shadow(0 0.6rem 1.4rem rgba(0,0,0,.25));
+}
+
+.visit-title {
+    font-size: 5rem;
+    color: #FFFFFF;
+    line-height: 1.2;
+    margin: 0 0 2rem 0;
+    font-weight: 500;
+}
+
+.visit-title-strong {
+    font-weight: 800;
+}
+
+.visit-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.visit-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.visit-check {
+    width: 2.4rem;
+    height: 2.4rem;
+    flex: 0 0 2.4rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.visit-check img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+}
+
+.visit-text {
+    color: #FFFFFF;
+    font-size: 2.6rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.visit-whatsapp {
+    color: #FFFFFF;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+
+@media (max-width: 1100px) {
+
+    .visit-container {
+        align-items: center;
+    }
+    .visit-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+        align-items: center;
+        justify-items: center;
+    }
+    .visit-icon {
+        justify-content: flex-start;
+    }
+    .visit-icon-img {
+        width: 10rem;
+    }
+    .visit-title {
+        font-size: 3.6rem;
+        margin-bottom: 1.6rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .visit-container {
+        padding: 2rem;
+    }
+    .visit-card {
+        padding: 3rem;
+        gap: 2rem;
+    }
+    .visit-title {
+        font-size: 3.2rem;
+    }
+}

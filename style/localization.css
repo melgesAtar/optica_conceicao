@@ -1,0 +1,169 @@
+.localization {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+
+}
+
+.localization-content {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    width: 56%;
+    padding-left: 28rem;
+    padding-right: 10rem;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    background: transparent linear-gradient(90deg, #00B1FB 0%, #002251 100%) 0% 0% no-repeat padding-box;
+
+}
+
+.localization-title {
+    font-size: 5rem;
+    text-align: left;
+    font-weight: 400;
+    color: #fff;
+    line-height: 1.2;
+    margin-bottom: 3rem;
+}
+
+.localization-subtitle {
+    font-size: 2.3rem;
+    text-align: left;
+    font-weight: 400;
+    color: #fff;
+    line-height: 1.2;
+    margin-bottom: 3.5rem;
+    max-width: 60rem;
+}
+
+.localization-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.localization-icon {
+    width: 2.7rem;
+    height: 2.7rem;
+    flex: 0 0 2.7rem; /* não encolhe e mantém largura fixa */
+    min-width: 2.7rem;
+    min-height: 2.7rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    align-self: start;
+}
+
+.localization-icon-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+.localization-item {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.localization-text {
+    font-size: 2.3rem;
+    text-align: left;
+    font-weight: 400;
+    color: #fff;
+    line-height: 1.2;
+    flex: 1 1 auto; /* texto ocupa o restante e quebra linha */
+    min-width: 0;
+   
+}
+.localization-img {
+    position: relative;
+    width: 44%;
+}
+
+.localization-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.localization-img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 15rem; 
+    pointer-events: none;
+    background: transparent;
+    -webkit-backdrop-filter: blur(1.2rem) brightness(1.06);
+    backdrop-filter: blur(1.2rem) brightness(1.06);
+}
+
+.localization-img::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 14.9rem; 
+    width: 0.1rem;
+    background: #FFFFFF;
+    pointer-events: none;
+}
+
+.localization-cta {
+    margin-top: 4rem;
+}
+
+@media (max-width: 1780px) {
+    .localization-content {
+       padding: 10rem;
+    }
+}
+
+
+@media (max-width: 1489px) {
+    .localization-title, .localization-subtitle, .localization-text {
+        text-align: center;
+    }
+    .localization-img::before , .localization-img::after {
+        display: none;
+    }
+    .localization-content {
+        padding: 5rem;
+    }
+    .localization-subtitle{
+        max-width: 100%;
+    }
+    .localization-cta{
+        align-self: center;
+    }
+    .localization-list {
+        align-items: center;
+    }
+}
+
+@media (max-width: 750px) {
+    .localization{
+        flex-direction: column;
+    }
+    .localization-content {
+        width: 100%;
+    }
+    .localization-img {
+        width: 100%;
+    }
+    .localization-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}

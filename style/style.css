@@ -1,0 +1,126 @@
+@import url("./reset.css");
+@import url("./hero.css");
+@import url("./about.css");
+@import url("./localization.css");
+@import url("./services.css");
+@import url("./testimonials.css");
+@import url("./visit.css");
+@import url("./footer.css");
+@import url("./knowledge.css");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+html {
+	font-size: 62.5%; /* 1rem = 10px */
+	scroll-behavior: smooth;
+	scrollbar-width: thin; /* Firefox */
+	scrollbar-color: #00B1FB #E6F5FF; /* thumb track */
+}
+
+@media (max-width: 1200px) {
+	html { font-size: 56.25%; }
+}
+
+@media (max-width: 992px) {
+	html { font-size: 50%; }
+}
+
+@media (max-width: 768px) {
+	html { font-size: 46.875%; }
+}
+
+@media (max-width: 576px) {
+	html { font-size: 43.75%; }
+}
+
+@media (max-width: 400px) {
+	html { font-size: 37.5%; }
+}
+
+html, body {
+	font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
+}
+
+.cta {
+	display: inline-flex;
+	align-items: center;
+	padding: 1rem 0.5rem 1rem 2rem;
+	border-radius: 20rem;
+	font-weight: 700;
+	text-decoration: none;
+	background: transparent linear-gradient(91deg, #06B200 0%, #48EA80 100%) 0% 0% no-repeat padding-box;
+	border: 0.1rem solid #FFFFFF;
+	opacity: 1;
+    max-width: 44rem;
+    height: 7.1rem;
+    animation: pulse-cta 1.2s infinite;
+	transition: box-shadow .2s ease, filter .2s ease;
+}
+
+.cta:hover {
+	box-shadow: 0 0.6rem 1.4rem rgba(6, 178, 0, 0.35);
+	filter: brightness(1.03);
+}
+
+.cta .cta-text {
+	color: #fff;
+    font-size: 2rem;
+    font-weight: 800;
+    text-align: left;
+    text-transform: uppercase;
+    
+}
+
+.cta .cta-icon {
+	display: inline-block;
+    background:#05B200;
+    padding: 1rem 1.5rem; 
+    border-radius: 20rem;
+	transition: transform .2s ease;
+}
+
+.cta-icon-img {
+	width: 10rem;
+}
+
+.cta:hover .cta-icon {
+	transform: translateX(0.2rem);
+}
+
+@keyframes pulse-cta {
+	0% {
+		transform: scale(1);
+	}
+	70% {
+		transform: scale(1.050);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+
+@media (max-width: 950px) {
+	.cta {
+        display: flex;
+        height: 100%;
+		width: 100%;
+		justify-content: center;
+
+	}
+}
+
+/* Scrollbar (WebKit) */
+::-webkit-scrollbar {
+	width: 10px;
+}
+::-webkit-scrollbar-track {
+	background: #E6F5FF;
+}
+::-webkit-scrollbar-thumb {
+	background: linear-gradient(180deg, #00B1FB 0%, #002251 100%);
+	border-radius: 20rem;
+	border: 2px solid #E6F5FF;
+}
+::-webkit-scrollbar-thumb:hover {
+	filter: brightness(1.06);
+}

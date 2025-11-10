@@ -1,0 +1,139 @@
+/* Knowledge (CONFIANÇA E RECONHECIMENTO) */
+.knowledge {
+    display: flex;
+    flex-direction: row;
+}
+
+.knowledge-content {
+    width: 56%;
+    padding: 8rem 10rem;
+}
+
+.knowledge-title {
+    font-size: 5rem;
+    font-weight: 500;
+    color: #404040;
+    line-height: 1.2;
+    margin-bottom: 3rem;
+}
+
+.knowledge-highlight {
+    color: #00599C;
+    font-weight: 700;
+}
+
+.knowledge-paragraph {
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: #404040;
+    line-height: 1.5;
+    max-width: 76rem;
+}
+
+.knowledge-paragraph:not(:last-child) {
+    margin-bottom: 2.2rem;
+}
+
+.knowledge-features {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin: 2.4rem 0 0 0;
+}
+
+.knowledge-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.knowledge-icon {
+    width: 2.7rem;
+    height: 2.7rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 2.7rem;
+}
+
+.knowledge-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.knowledge-text {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #404040;
+}
+
+.knowledge-cta {
+    margin-top: 3rem;
+}
+
+.knowledge-img {
+    position: relative;
+    width: 44%;
+}
+
+.knowledge-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* efeito invertido (da direita para a esquerda) */
+.knowledge-img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 15rem;
+    pointer-events: none;
+    background: transparent;
+    -webkit-backdrop-filter: blur(1.2rem) brightness(1.06);
+    backdrop-filter: blur(1.2rem) brightness(1.06);
+}
+
+.knowledge-img::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 14.9rem;
+    width: 0.1rem;
+    background: #FFFFFF;
+    pointer-events: none;
+}
+
+@media (max-width: 1200px) {
+    .knowledge {
+        flex-direction: column-reverse;
+    }
+    .knowledge-img::before,
+    .knowledge-img::after {
+        display: none;
+    }
+    .knowledge-content {
+        padding: 5rem;
+        width: 100%;
+    }
+    .knowledge-title, .knowledge-paragraph, .knowledge-text {
+        text-align: center;
+    }
+    .knowledge-features {
+        align-items: center;
+    }
+    .knowledge-cta {
+        align-self: center;
+    }
+    .knowledge-img {
+        width: 100%;
+    }
+}
+
+

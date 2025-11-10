@@ -1,0 +1,141 @@
+.hero {
+	transform: scaleX(-1);
+	background-image: url('../assets/hero/hero-bg.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.hero .hero-container {
+	transform: scaleX(-1);
+	position: relative;
+	padding: 16rem 0;
+}
+
+.hero-content {
+	position: relative;
+	width: 70rem;
+	z-index: 2;
+	margin-left: 28.5rem;
+}
+
+.hero-logo{
+	width: 26.1rem;
+	margin-bottom: 3rem;
+}
+
+.hero-title {
+	font-size: 5rem;
+	font-weight: 400;
+	color: #fff;
+	line-height: 1.2;
+	margin-bottom: 2rem;
+}
+
+.hero-paragraph {
+	font-size: 2.5rem;
+	font-weight: 400;
+	color: #fff;
+	line-height: 2;
+	margin-bottom: 2rem;
+	max-width: 49.9rem;
+	margin-bottom: 4rem;
+}
+
+.box-up {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	border: 0.1rem solid white;
+	height: 3.3rem;
+	width: 100%;
+	background: rgba(255, 255, 255, 0.1);
+	opacity: 1;
+}
+
+.box-down {
+	position: absolute;
+	z-index: 1;
+	bottom: 0;
+	border: 0.1rem solid white;
+	height: 3.3rem;
+	width: 100%;
+	background: rgba(255, 255, 255, 0.1);
+	opacity: 1;
+}
+
+.hero-proof {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	margin-top: 8rem;
+}
+
+.proof-copy {
+	font-size: 1.5rem;
+	font-weight: 400;
+	color: #fff;
+	line-height: 1.1;
+}
+
+.hero-arrow-down img{
+	position: absolute;
+	bottom: 6.5rem;
+	left: 50%;
+	transform: translateX(-50%);
+	animation: point-down 1.2s infinite cubic-bezier(.53,.04,.29,.97);
+}
+
+@keyframes point-down {
+	0% {
+		transform: translateX(-50%) translateY(0);
+	}
+	40% {
+		transform: translateX(-50%) translateY(1.5rem);
+	}
+	60% {
+		transform: translateX(-50%) translateY(1.5rem);
+	}
+	100% {
+		transform: translateX(-50%) translateY(0);
+	}
+}
+
+@media (max-width: 1845px) {
+	.hero-content {
+		margin-left: 0;
+		padding-left: 10rem;
+	}
+}
+
+@media (max-width: 1669px) {
+	.hero {
+		background-position: right;
+		background-repeat: no-repeat;
+	}
+}
+
+@media (max-width: 950px) {
+	.hero-content {
+		display: flex;
+		flex-direction: column;
+		padding: 5rem;
+		width: 100%;
+		align-items: center;
+		text-align: center;
+		justify-content: center;
+	}
+
+	.hero-container{
+		padding: 5rem 0 !important;
+	}
+
+	.hero-proof{
+		flex-direction: column;
+	}
+	.hero-arrow-down{
+		padding-top: 5rem;
+	}
+	.hero-arrow-down img{
+		position: relative;
+	}
+}
