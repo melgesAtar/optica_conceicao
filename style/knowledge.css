@@ -5,8 +5,11 @@
 }
 
 .knowledge-content {
-    width: 56%;
-    padding: 8rem 10rem;
+    width: 60%;
+    padding-top: 8rem;
+    padding-left: 28rem;
+    padding-right: 8rem;
+    padding-bottom: 5rem;
 }
 
 .knowledge-title {
@@ -23,13 +26,20 @@
 }
 
 .knowledge-paragraph {
+    font-size: 2.3rem;
+    font-weight: 500;
+    color: #404040;
+    line-height: 1.5;
+    max-width: 61rem;
+}
+
+.knowledge-features-title {
     font-size: 2.2rem;
     font-weight: 500;
     color: #404040;
     line-height: 1.5;
-    max-width: 76rem;
+    margin-bottom: 1.2rem;
 }
-
 .knowledge-paragraph:not(:last-child) {
     margin-bottom: 2.2rem;
 }
@@ -37,8 +47,8 @@
 .knowledge-features {
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
-    margin: 2.4rem 0 0 0;
+    gap: 4rem;
+    margin: 2.4rem 0 2.8rem 0;
 }
 
 .knowledge-item {
@@ -64,7 +74,7 @@
 }
 
 .knowledge-text {
-    font-size: 2rem;
+    font-size: 2.3rem;
     font-weight: 500;
     color: #404040;
 }
@@ -75,7 +85,7 @@
 
 .knowledge-img {
     position: relative;
-    width: 44%;
+    width: 40%;
 }
 
 .knowledge-img img {
@@ -110,6 +120,12 @@
     pointer-events: none;
 }
 
+@media (max-width: 1600px) {
+    .knowledge-content {
+        padding: 5rem;
+    }
+}
+
 @media (max-width: 1200px) {
     .knowledge {
         flex-direction: column-reverse;
@@ -119,20 +135,37 @@
         display: none;
     }
     .knowledge-content {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        display: flex;
         padding: 5rem;
         width: 100%;
     }
-    .knowledge-title, .knowledge-paragraph, .knowledge-text {
+    .knowledge-title, .knowledge-paragraph, .knowledge-text, .knowledge-features-title, .knowledge-highlight {
         text-align: center;
+        max-width: 100% ;
     }
+    .knowledge-title ,.knowledge-highlight {
+        width: 100%;
+    }
+	/* Evita overflow do título e do destaque dentro do container em telas pequenas */
+	.knowledge-title,
+	.knowledge-features-title {
+		overflow-wrap: anywhere;
+		word-break: break-word;
+		hyphens: auto;
+	}
     .knowledge-features {
         align-items: center;
     }
     .knowledge-cta {
         align-self: center;
+
     }
     .knowledge-img {
-        width: 100%;
+       display: none;
     }
 }
 
